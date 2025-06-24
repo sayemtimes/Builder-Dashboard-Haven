@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { Bell, Moon, Sun, Download, Menu, X, BarChart3 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
+import NotificationDropdown from "./NotificationDropdown";
+import ExportModal from "./ExportModal";
+import ProfileDropdown from "./ProfileDropdown";
 
 interface NavigationProps {
   className?: string;
@@ -69,11 +70,13 @@ const Navigation = ({ className }: NavigationProps) => {
 
         {/* Right Side */}
         <div className="ml-auto flex items-center space-x-4">
-          {/* Download Reports Button */}
-          <Button variant="outline" size="sm" className="hidden sm:flex">
-            <Download className="mr-2 h-4 w-4" />
-            Export
-          </Button>
+          {/* Export Modal */}
+          <ExportModal>
+            <Button variant="outline" size="sm" className="hidden sm:flex">
+              <Download className="mr-2 h-4 w-4" />
+              Export
+            </Button>
+          </ExportModal>
 
           {/* Dark Mode Toggle */}
           <Button variant="ghost" size="sm" onClick={toggleTheme}>
@@ -85,21 +88,10 @@ const Navigation = ({ className }: NavigationProps) => {
           </Button>
 
           {/* Notifications */}
-          <Button variant="ghost" size="sm" className="relative">
-            <Bell className="h-4 w-4" />
-            <Badge
-              variant="destructive"
-              className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 text-xs"
-            >
-              3
-            </Badge>
-          </Button>
+          <NotificationDropdown />
 
-          {/* User Avatar */}
-          <Avatar className="h-8 w-8">
-            <AvatarImage src="/placeholder.svg" alt="User" />
-            <AvatarFallback>JD</AvatarFallback>
-          </Avatar>
+          {/* User Profile */}
+          <ProfileDropdown />
 
           {/* Mobile Menu Button */}
           <Button
@@ -140,10 +132,12 @@ const Navigation = ({ className }: NavigationProps) => {
               );
             })}
             <div className="mt-4 pt-4 border-t">
-              <Button variant="outline" size="sm" className="w-full">
-                <Download className="mr-2 h-4 w-4" />
-                Export Reports
-              </Button>
+              <ExportModal>
+                <Button variant="outline" size="sm" className="w-full">
+                  <Download className="mr-2 h-4 w-4" />
+                  Export Reports
+                </Button>
+              </ExportModal>
             </div>
           </div>
         </div>
