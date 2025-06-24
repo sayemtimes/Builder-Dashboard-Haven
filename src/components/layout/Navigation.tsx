@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -13,13 +14,14 @@ interface NavigationProps {
 const Navigation = ({ className }: NavigationProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const location = useLocation();
 
   const menuItems = [
-    { label: "Home", href: "/", active: true },
-    { label: "Sales", href: "/sales", active: false },
-    { label: "Marketing", href: "/marketing", active: false },
-    { label: "Support", href: "/support", active: false },
-    { label: "Reports", href: "/reports", active: false },
+    { label: "Home", href: "/" },
+    { label: "Sales", href: "/sales" },
+    { label: "Marketing", href: "/marketing" },
+    { label: "Support", href: "/support" },
+    { label: "Reports", href: "/reports" },
   ];
 
   const toggleTheme = () => {
@@ -46,20 +48,23 @@ const Navigation = ({ className }: NavigationProps) => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex md:ml-10 md:space-x-8">
-          {menuItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                item.active
-                  ? "text-foreground border-b-2 border-primary"
-                  : "text-muted-foreground",
-              )}
-            >
-              {item.label}
-            </a>
-          ))}
+          {menuItems.map((item) => {
+            const isActive = location.pathname === item.href;
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-primary",
+                  isActive
+                    ? "text-foreground border-b-2 border-primary"
+                    : "text-muted-foreground",
+                )}
+              >
+                {item.label}
+              </a>
+            );
+          })}
         </div>
 
         {/* Right Side */}
@@ -116,21 +121,24 @@ const Navigation = ({ className }: NavigationProps) => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-b">
-            {menuItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className={cn(
-                  "block px-3 py-2 text-base font-medium rounded-md transition-colors",
-                  item.active
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-primary hover:bg-accent",
-                )}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
+            {menuItems.map((item) => {
+              const isActive = location.pathname === item.href;
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className={cn(
+                    "block px-3 py-2 text-base font-medium rounded-md transition-colors",
+                    isActive
+                      ? "text-primary bg-primary/10"
+                      : "text-muted-foreground hover:text-primary hover:bg-accent",
+                  )}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
             <div className="mt-4 pt-4 border-t">
               <Button variant="outline" size="sm" className="w-full">
                 <Download className="mr-2 h-4 w-4" />
