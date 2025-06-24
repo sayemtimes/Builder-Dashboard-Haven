@@ -18,7 +18,8 @@ const Navigation = ({ className }: NavigationProps) => {
   const location = useLocation();
 
   const menuItems = [
-    { label: "Home", href: "/" },
+    { label: "Overview", href: "/" },
+    { label: "Dashboard", href: "/dashboard" },
     { label: "Sales", href: "/sales" },
     { label: "Marketing", href: "/marketing" },
     { label: "Support", href: "/support" },

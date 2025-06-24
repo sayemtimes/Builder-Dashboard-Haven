@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "next-themes";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Overview from "./pages/Overview";
 import Index from "./pages/Index";
 import Sales from "./pages/Sales";
 import Marketing from "./pages/Marketing";
@@ -21,7 +22,8 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<Overview />} />
+            <Route path="/dashboard" element={<Index />} />
             <Route path="/sales" element={<Sales />} />
             <Route path="/marketing" element={<Marketing />} />
             <Route path="/support" element={<Support />} />
