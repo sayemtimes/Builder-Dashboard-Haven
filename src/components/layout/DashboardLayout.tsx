@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import Navigation from "./Navigation";
 import AIAssistant from "../dashboard/AIAssistant";
 
