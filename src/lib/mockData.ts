@@ -480,3 +480,36 @@ export const mockCustomers = [
     tags: ["Retail", "Medium Size"],
   },
 ];
+
+// Filter Options for dashboard components
+export const filterOptions = {
+  dateRanges: [
+    { label: "Last 7 days", value: "7d" },
+    { label: "Last 30 days", value: "30d" },
+    { label: "Last 90 days", value: "90d" },
+    { label: "Last 6 months", value: "6m" },
+    { label: "Last year", value: "1y" },
+    { label: "All time", value: "all" },
+  ],
+  regions: [
+    { label: "All Regions", value: "all" },
+    { label: "North America", value: "na" },
+    { label: "Europe", value: "eu" },
+    { label: "Asia Pacific", value: "apac" },
+    { label: "Latin America", value: "latam" },
+    { label: "Middle East & Africa", value: "mea" },
+  ],
+  salesReps: [
+    { label: "All Sales Reps", value: "all" },
+    { label: "Sarah Johnson", value: "sarah" },
+    { label: "Michael Chen", value: "michael" },
+    { label: "Emily Rodriguez", value: "emily" },
+    { label: "David Thompson", value: "david" },
+  ],
+  segments: [
+    { label: "Enterprise", value: "enterprise" },
+    { label: "Mid-Market", value: "mid-market" },
+    { label: "SMB", value: "smb" },
+    { label: "Startup", value: "startup" },
+  ],
+};
