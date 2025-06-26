@@ -439,6 +439,15 @@ export const retentionData = [
   { cohort: "Jun 2023", month1: 100, month3: 89, month6: 76, month12: 63 },
 ];
 
+// Customer Churn Reasons
+export const churnReasons = [
+  { reason: "Price too high", percentage: 32, count: 156 },
+  { reason: "Poor customer service", percentage: 24, count: 117 },
+  { reason: "Feature limitations", percentage: 18, count: 88 },
+  { reason: "Found better alternative", percentage: 15, count: 73 },
+  { reason: "Technical issues", percentage: 11, count: 54 },
+];
+
 // Mock deals data for CRUD operations
 export const mockDeals = [
   {
