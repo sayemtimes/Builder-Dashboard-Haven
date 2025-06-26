@@ -32,11 +32,10 @@ const CustomTooltip = ({ active, payload }: any) => {
         <p className="font-medium">{data.stage}</p>
         <p className="text-sm text-muted-foreground">
           Customers:{" "}
-          <span className="font-medium">{data.customers.toLocaleString()}</span>
+          <span className="font-medium">{data.count.toLocaleString()}</span>
         </p>
         <p className="text-sm text-muted-foreground">
-          Conversion:{" "}
-          <span className="font-medium">{data.conversionRate}%</span>
+          Conversion: <span className="font-medium">{data.conversion}%</span>
         </p>
       </div>
     );
