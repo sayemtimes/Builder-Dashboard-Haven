@@ -209,14 +209,14 @@ const AIAssistant = ({ className }: AIAssistantProps) => {
               <div className="space-y-1">
                 {aiSuggestions.slice(0, 3).map((suggestion, index) => (
                   <motion.button
-                    key={suggestion}
+                    key={suggestion.id}
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    onClick={() => handleSuggestionClick(suggestion)}
+                    onClick={() => handleSuggestionClick(suggestion.title)}
                     className="block w-full text-left text-xs p-2 rounded-lg bg-accent/50 hover:bg-accent transition-colors"
                   >
-                    {suggestion}
+                    {suggestion.title}
                   </motion.button>
                 ))}
               </div>
