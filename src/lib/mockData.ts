@@ -448,6 +448,64 @@ export const churnReasons = [
   { reason: "Technical issues", percentage: 11, count: 54 },
 ];
 
+// Cohort Data for retention analysis
+export const cohortData = [
+  {
+    month: "Jan 2023",
+    month0: 100,
+    month1: 85,
+    month2: 72,
+    month3: 58,
+    month4: 48,
+    month5: 42,
+  },
+  {
+    month: "Feb 2023",
+    month0: 100,
+    month1: 88,
+    month2: 75,
+    month3: 62,
+    month4: 52,
+    month5: 45,
+  },
+  {
+    month: "Mar 2023",
+    month0: 100,
+    month1: 82,
+    month2: 69,
+    month3: 55,
+    month4: 46,
+    month5: 39,
+  },
+  {
+    month: "Apr 2023",
+    month0: 100,
+    month1: 91,
+    month2: 78,
+    month3: 65,
+    month4: 55,
+    month5: 48,
+  },
+  {
+    month: "May 2023",
+    month0: 100,
+    month1: 86,
+    month2: 73,
+    month3: 59,
+    month4: 49,
+    month5: 43,
+  },
+  {
+    month: "Jun 2023",
+    month0: 100,
+    month1: 89,
+    month2: 76,
+    month3: 63,
+    month4: 53,
+    month5: 46,
+  },
+];
+
 // Mock deals data for CRUD operations
 export const mockDeals = [
   {
