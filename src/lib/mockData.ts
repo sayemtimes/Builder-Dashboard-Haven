@@ -506,6 +506,15 @@ export const cohortData = [
   },
 ];
 
+// Ad Spend Data for marketing dashboard
+export const adSpendData = [
+  { name: "Google Ads", amount: 25000, value: 42 },
+  { name: "Facebook Ads", amount: 18000, value: 30 },
+  { name: "LinkedIn Ads", amount: 10000, value: 17 },
+  { name: "Twitter Ads", amount: 4000, value: 7 },
+  { name: "YouTube Ads", amount: 2500, value: 4 },
+];
+
 // Mock deals data for CRUD operations
 export const mockDeals = [
   {
