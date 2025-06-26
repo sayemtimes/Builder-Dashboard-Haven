@@ -1,3 +1,63 @@
+// Types
+export interface KPIData {
+  id: string;
+  title: string;
+  value: string;
+  trend: "up" | "down";
+  percentage: string;
+  description: string;
+  icon: string;
+}
+
+// KPI Data for dashboard cards
+export const kpiData: KPIData[] = [
+  {
+    id: "revenue",
+    title: "Total Revenue",
+    value: "$847K",
+    trend: "up",
+    percentage: "+12.5%",
+    description: "vs last month",
+    icon: "💰",
+  },
+  {
+    id: "deals",
+    title: "Active Deals",
+    value: "124",
+    trend: "up",
+    percentage: "+8.2%",
+    description: "vs last month",
+    icon: "📊",
+  },
+  {
+    id: "customers",
+    title: "Total Customers",
+    value: "2,945",
+    trend: "up",
+    percentage: "+15.3%",
+    description: "vs last month",
+    icon: "👥",
+  },
+  {
+    id: "conversion",
+    title: "Conversion Rate",
+    value: "18.5%",
+    trend: "down",
+    percentage: "-2.1%",
+    description: "vs last month",
+    icon: "🎯",
+  },
+  {
+    id: "satisfaction",
+    title: "Customer Satisfaction",
+    value: "4.8",
+    trend: "up",
+    percentage: "+0.3",
+    description: "avg rating",
+    icon: "⭐",
+  },
+];
+
 // Sales Data
 export const salesData = [
   { month: "Jan", revenue: 45000, deals: 23, conversion: 12.5 },
