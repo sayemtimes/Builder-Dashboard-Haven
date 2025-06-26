@@ -598,6 +598,90 @@ export const highValueClients = [
   },
 ];
 
+// Activity Feed for live timeline
+export const activityFeed: ActivityItem[] = [
+  {
+    id: "act1",
+    icon: "💰",
+    message: "New deal closed with Acme Corp for $45,000",
+    time: "2 min ago",
+    type: "deal",
+    user: "Sarah Johnson",
+  },
+  {
+    id: "act2",
+    icon: "👤",
+    message: "New customer signed up from organic search",
+    time: "5 min ago",
+    type: "customer",
+    user: "System",
+  },
+  {
+    id: "act3",
+    icon: "📧",
+    message: "Email campaign launched to 2,500 subscribers",
+    time: "12 min ago",
+    type: "marketing",
+    user: "Marketing Team",
+  },
+  {
+    id: "act4",
+    icon: "🎯",
+    message: "Lead qualified and assigned to sales rep",
+    time: "18 min ago",
+    type: "lead",
+    user: "David Thompson",
+  },
+  {
+    id: "act5",
+    icon: "🔧",
+    message: "Critical support ticket resolved",
+    time: "25 min ago",
+    type: "support",
+    user: "Tech Support",
+  },
+  {
+    id: "act6",
+    icon: "📊",
+    message: "Weekly report generated and shared",
+    time: "32 min ago",
+    type: "report",
+    user: "System",
+  },
+  {
+    id: "act7",
+    icon: "💳",
+    message: "Payment received from Premium customer",
+    time: "45 min ago",
+    type: "payment",
+    user: "Billing System",
+  },
+  {
+    id: "act8",
+    icon: "🔗",
+    message: "New integration connected successfully",
+    time: "1 hour ago",
+    type: "integration",
+    user: "IT Team",
+  },
+  {
+    id: "act9",
+    icon: "📞",
+    message: "Sales call scheduled with enterprise prospect",
+    time: "1.5 hours ago",
+    type: "sales",
+    user: "Michael Chen",
+  },
+  {
+    id: "act10",
+    icon: "🚀",
+    message: "Product feature update deployed",
+    time: "2 hours ago",
+    type: "product",
+    user: "Development Team",
+  },
+];
+
 // Mock deals data for CRUD operations
 export const mockDeals = [
   {
