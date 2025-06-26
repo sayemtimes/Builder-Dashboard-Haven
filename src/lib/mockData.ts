@@ -515,6 +515,80 @@ export const adSpendData = [
   { name: "YouTube Ads", amount: 2500, value: 4 },
 ];
 
+// High Value Clients for CLTV dashboard
+export const highValueClients = [
+  {
+    name: "Acme Enterprise Corp",
+    cltv: 485000,
+    monthlySpend: 15000,
+    segment: "Enterprise",
+    tenure: "3.2 years",
+  },
+  {
+    name: "TechGlobal Solutions",
+    cltv: 420000,
+    monthlySpend: 12500,
+    segment: "Enterprise",
+    tenure: "2.8 years",
+  },
+  {
+    name: "Innovation Labs Inc",
+    cltv: 380000,
+    monthlySpend: 11000,
+    segment: "Enterprise",
+    tenure: "2.5 years",
+  },
+  {
+    name: "Digital Dynamics LLC",
+    cltv: 320000,
+    monthlySpend: 9500,
+    segment: "Mid-Market",
+    tenure: "2.1 years",
+  },
+  {
+    name: "Future Systems Co",
+    cltv: 285000,
+    monthlySpend: 8500,
+    segment: "Mid-Market",
+    tenure: "1.9 years",
+  },
+  {
+    name: "CloudFirst Technologies",
+    cltv: 250000,
+    monthlySpend: 7500,
+    segment: "Mid-Market",
+    tenure: "1.7 years",
+  },
+  {
+    name: "DataDriven Enterprises",
+    cltv: 225000,
+    monthlySpend: 6800,
+    segment: "Mid-Market",
+    tenure: "1.5 years",
+  },
+  {
+    name: "SmartScale Solutions",
+    cltv: 200000,
+    monthlySpend: 6200,
+    segment: "SMB",
+    tenure: "1.3 years",
+  },
+  {
+    name: "NextGen Innovations",
+    cltv: 185000,
+    monthlySpend: 5800,
+    segment: "SMB",
+    tenure: "1.2 years",
+  },
+  {
+    name: "AgileWorks Partners",
+    cltv: 165000,
+    monthlySpend: 5200,
+    segment: "SMB",
+    tenure: "1.1 years",
+  },
+];
+
 // Mock deals data for CRUD operations
 export const mockDeals = [
   {
