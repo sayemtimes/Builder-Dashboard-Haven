@@ -9,6 +9,15 @@ export interface KPIData {
   icon: string;
 }
 
+export interface ActivityItem {
+  id: string;
+  icon: string;
+  message: string;
+  time: string;
+  type: string;
+  user: string;
+}
+
 // KPI Data for dashboard cards
 export const kpiData: KPIData[] = [
   {
