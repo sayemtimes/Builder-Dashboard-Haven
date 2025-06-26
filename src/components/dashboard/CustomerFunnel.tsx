@@ -32,11 +32,10 @@ const CustomTooltip = ({ active, payload }: any) => {
         <p className="font-medium">{data.stage}</p>
         <p className="text-sm text-muted-foreground">
           Customers:{" "}
-          <span className="font-medium">{data.customers.toLocaleString()}</span>
+          <span className="font-medium">{data.count.toLocaleString()}</span>
         </p>
         <p className="text-sm text-muted-foreground">
-          Conversion:{" "}
-          <span className="font-medium">{data.conversionRate}%</span>
+          Conversion: <span className="font-medium">{data.conversion}%</span>
         </p>
       </div>
     );
@@ -98,7 +97,7 @@ const CustomerFunnel = ({ className }: CustomerFunnelProps) => {
                 />
                 <p className="text-xs font-medium">{stage.stage}</p>
                 <p className="text-xs text-muted-foreground">
-                  {stage.customers.toLocaleString()}
+                  {stage.count.toLocaleString()}
                 </p>
               </div>
             ))}
