@@ -97,7 +97,7 @@ const CustomerFunnel = ({ className }: CustomerFunnelProps) => {
                 />
                 <p className="text-xs font-medium">{stage.stage}</p>
                 <p className="text-xs text-muted-foreground">
-                  {stage.customers.toLocaleString()}
+                  {stage.count.toLocaleString()}
                 </p>
               </div>
             ))}
